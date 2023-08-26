@@ -18,12 +18,14 @@ const RegisterScreen = () => {
     <FormContainer>
         <h1>Sign Up</h1>
         <Form onSubmit={submitHandler}>
-        <Form.Group className='my-2' controlId="email">
+        <Form.Group className='my-2' controlId="name">
             <Form.Label>Name</Form.Label>
             <Form.Control
-                type="name"
+                type="text"
                 placeholder="Name"
+                autoComplete="name"
                 value={name}
+                required
                 onChange={(e) => setName(e.target.value)}
             ></Form.Control>
         </Form.Group>
@@ -32,7 +34,9 @@ const RegisterScreen = () => {
             <Form.Control
                 type="email"
                 placeholder="Email"
+                autoComplete="email"
                 value={email}
+                required
                 onChange={(e) => setEmail(e.target.value)}
             ></Form.Control>
         </Form.Group>
@@ -41,7 +45,9 @@ const RegisterScreen = () => {
             <Form.Control
                 type="password"
                 placeholder="Password"
+                autoComplete="new-password"
                 value={password}
+                required
                 onChange={(e) => setPassword(e.target.value)}
             ></Form.Control>
         </Form.Group>
@@ -50,12 +56,14 @@ const RegisterScreen = () => {
             <Form.Control
                 type="password"
                 placeholder="Confirm Password"
+                autoComplete="new-password"
                 value={confirmPassword}
+                required
                 onChange={(e) => setConfirmPassword(e.target.value)}
             ></Form.Control>
         </Form.Group>
         <Button type="submit" variant="primary" className='my-2'>
-            Sign In
+            Sign Up
         </Button>
         <Row className="py-3">
             <Col>
